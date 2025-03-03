@@ -11,7 +11,6 @@ const DrawerMenu: React.FC = () => {
     screens.sm ? setIsOpen(false) : setIsOpen(true)
   }, [screens])
 
-
   return (
     <Drawer
       open={isOpen}

@@ -1,36 +1,40 @@
 import React from "react"
-import { Layout } from "antd"
-import DrawerMenu from "./components/DrawerMenu"
-import Header from "./components/Header"
-import Footer from "./components/Footer"
+import { createHashRouter, RouterProvider } from "react-router-dom"
 
-import './App.css'
+import AppLayout from "./AppLayout"
+import Home from "./components/Home"
+import Characters from "./components/Characters"
 
 const App: React.FC = () => {
-  const { Content } = Layout
 
-  return (
-    <div style={{ height: "100%" }}>
-      <main className="mainLayout">
-        <div id="stars"></div>
-        <div id="stars2"></div>
-        <div id="stars3"></div>
-        <div id="stars4"></div>
-      </ main>
-      <DrawerMenu />
-
-      <Header />
-
-      <div className="container" style={{ display: "flex", flexDirection: "column" }}>
-
-        <Content >
-          <div style={{ color: "#fff", fontSize: "30px" }}>CONTENT</div>
-        </Content>
-
-        <Footer />
-      </div>
-    </div>
+  const router = createHashRouter([
+    {
+      path: "/",
+      element: <AppLayout />,
+      children: [
+        {
+          path: "/",
+          element: <Home />
+        },
+        {
+          path: "/characters",
+          element: <Characters />
+        },
+      ]
+    }
+  ],
+    {
+      future: {
+        v7_fetcherPersist: true,
+        v7_normalizeFormMethod: true,
+        v7_partialHydration: true,
+        v7_relativeSplatPath: true,
+        v7_skipActionErrorRevalidation: true,
+      }
+    }
   )
-};
+
+  return (<RouterProvider router={router} future={{ v7_startTransition: true }} />)
+}
 
 export default App

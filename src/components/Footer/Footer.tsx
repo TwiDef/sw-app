@@ -5,7 +5,14 @@ const Footer: React.FC = () => {
   const { Footer } = Layout
 
   return (
-    <Footer style={{ textAlign: 'center', marginTop: "auto" }}>
+    <Footer style={{
+      marginTop: "auto",
+      height: "64px",
+      padding: "0",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
       <div style={{ fontSize: "30px" }}>FOOTER</div>
     </Footer>
   );
