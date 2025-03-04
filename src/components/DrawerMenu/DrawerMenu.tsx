@@ -1,14 +1,13 @@
 import React from 'react'
+import { useAppSelector } from '../../redux/hooks'
 import { Drawer } from "antd"
-import { Grid } from "antd"
 
 const DrawerMenu: React.FC = () => {
+  const { screens } = useAppSelector(state => state.media)
   const [isOpen, setIsOpen] = React.useState<boolean>(true)
-  const { useBreakpoint } = Grid
-  const screens = useBreakpoint()
 
   React.useEffect(() => {
-    screens.sm ? setIsOpen(false) : setIsOpen(true)
+    screens?.md ? setIsOpen(false) : setIsOpen(true)
   }, [screens])
 
   return (

@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'StarWars';
+    src: url('./../../fonts/StarWars.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.ant-layout-header {
+    font-family: 'StarWars', sans-serif;
+}
+
+.ant-layout-header a {
+    font-size: 1.2rem;
+    color: #ffff92;
+}
+
+.ant-layout-header a:hover {
+    color: #568cff;
+}

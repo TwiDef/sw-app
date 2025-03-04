@@ -1,4 +1,4 @@
-export interface headerItem {
+export interface IheaderItem {
   children: string,
   to: string
 }

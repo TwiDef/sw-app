@@ -11,9 +11,10 @@ const Footer: React.FC = () => {
       padding: "0",
       display: "flex",
       alignItems: "center",
-      justifyContent: "center"
+      justifyContent: "center",
+      background: "inherit"
     }}>
-      <div style={{ fontSize: "30px" }}>FOOTER</div>
+      <div style={{ fontSize: "30px", color: "#ffff92" }}>FOOTER</div>
     </Footer>
   );
 };

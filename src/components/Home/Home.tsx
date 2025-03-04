@@ -1,10 +1,13 @@
-import React from 'react';
+import React from 'react'
 
 const Home: React.FC = () => {
+
   return (
-    <div style={{ color: "#ffd" }}>
-      HOME
-    </div>
+    <>
+      <div style={{ color: "#ffd", fontSize: "2rem" }}>
+        HOME
+      </div>
+    </>
   );
 };
 
