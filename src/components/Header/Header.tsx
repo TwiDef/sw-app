@@ -1,37 +1,19 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
-import { useAppSelector } from "../../redux/hooks";
-import { IheaderItem } from "../../types"
-import { Layout } from "antd"
+import { useAppSelector } from "../../redux/hooks"
+import { MenuOutlined } from "@ant-design/icons"
+import { Button, Layout } from "antd"
+import { headerItems } from "./HeaderItems"
 
-import "./Header.css";
+import "./Header.css"
 
-const Header: React.FC = () => {
+type HeaderProps = {
+  setIsOpen: (prev) => void
+}
+
+const Header: React.FC<HeaderProps> = ({ setIsOpen }) => {
   const { Header } = Layout
   const { screens } = useAppSelector(state => state.media)
-
-  const headerItems: IheaderItem[] = [
-    {
-      children: 'Home',
-      to: '/'
-    },
-    {
-      children: 'Characters',
-      to: 'characters/?page=1'
-    },
-    {
-      children: 'Films',
-      to: 'films'
-    },
-    {
-      children: 'Species',
-      to: 'species/?page=1'
-    },
-    {
-      children: 'Search',
-      to: 'search'
-    }
-  ]
 
   return (
     <Header style={{
@@ -41,11 +23,12 @@ const Header: React.FC = () => {
       padding: "0",
       display: "flex",
       alignItems: "center",
-      justifyContent: "center",
+      justifyContent: screens?.md ? "center" : "end",
+      paddingRight: screens?.md ? "0" : "10px",
       height: "64px",
       lineHeight: "1.5"
     }}>
-      {screens?.md &&
+      {screens?.md ?
         <div style={{ fontSize: "30px" }}>
           <nav>
             <ul style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
@@ -64,6 +47,12 @@ const Header: React.FC = () => {
             </ul>
           </nav>
         </div>
+        :
+        <Button
+          onClick={() => setIsOpen((prev: boolean) => !prev)}
+          size="large"
+          style={{ background: "#ffff92" }}
+          icon={<MenuOutlined />} />
       }
     </Header>
   );

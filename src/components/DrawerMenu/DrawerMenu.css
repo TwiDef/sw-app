@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'StarWars';
+    src: url('./../../fonts/StarWars.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.ant-drawer .ant-drawer-content {
+    font-family: 'StarWars', sans-serif;
+}
+
+.ant-drawer .ant-drawer-content a {
+    font-size: 1.2rem;
+    color: #ffff92;
+}
+
+.ant-drawer .ant-drawer-content  a:hover {
+    color: #568cff;
+}
+
+.ant-drawer .ant-drawer-close {
+    color: rgb(255, 255, 146);
+}
+
+.ant-drawer .ant-drawer-close:hover {
+    color: rgb(21, 21, 5);
+    background-color: rgb(255, 255, 0)
+}
