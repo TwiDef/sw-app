@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'StarWars';
+    src: url('./../../fonts/StarWars.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.mainTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 -1px 1px #FFF, 0 0 10px  #ffff92, 0 0 20px #568cff, 0 -18px 30px #568cff;;
+}
+
+.mainTitle h2{
+    font-family: 'StarWars', sans-serif;
+    font-size: 120px;
+    line-height: 130px;
+    color: #ffff92;
+}
+.mainTitle span {
+    margin-top: -26px;
+    font-size: 30px;
+    color: #ffff92;
+}

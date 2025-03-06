@@ -30,7 +30,6 @@ const AppLayout: React.FC = () => {
           maxWidth: "1200px",
           width: "100%",
           margin: "0 auto",
-          padding: "0 15px"
         }}>
           <Outlet />
         </Content>

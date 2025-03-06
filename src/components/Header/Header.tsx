@@ -55,7 +55,7 @@ const Header: React.FC<HeaderProps> = ({ setIsOpen }) => {
           icon={<MenuOutlined />} />
       }
     </Header>
-  );
-};
+  )
+}
 
 export default Header

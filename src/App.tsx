@@ -5,7 +5,7 @@ import { setScreens } from "./redux/slices/mediaSlice"
 import { Grid } from "antd"
 
 import AppLayout from "./AppLayout"
-import Home from "./components/Home"
+import Home from "./pages/home-page"
 import Characters from "./components/Characters"
 
 const App: React.FC = () => {
