@@ -1,7 +1,7 @@
 import React from 'react'
 import MainTitle from '../components/MainTitle'
 
-const Home: React.FC = () => {
+const HomePage: React.FC = () => {
 
   return (
     <section style={{
@@ -15,4 +15,4 @@ const Home: React.FC = () => {
   )
 }
 
-export default Home
+export default HomePage

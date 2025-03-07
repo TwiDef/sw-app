@@ -1,11 +1,19 @@
-import React from 'react';
+import React from 'react'
+import { IfethedCharacters } from '../../services/@types'
 
-const Characters: React.FC = () => {
+type CharactersProps = {
+  data?: IfethedCharacters
+}
+
+const Characters: React.FC<CharactersProps> = ({ data }) => {
+
+  console.log(data)
+
   return (
     <div style={{ color: "#ffd" }}>
-      CHARACTERS
+      CHARACTERS=+
     </div>
-  );
-};
+  )
+}
 
-export default Characters;
+export default Characters

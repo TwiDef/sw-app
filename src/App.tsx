@@ -5,8 +5,8 @@ import { setScreens } from "./redux/slices/mediaSlice"
 import { Grid } from "antd"
 
 import AppLayout from "./AppLayout"
-import Home from "./pages/home-page"
-import Characters from "./components/Characters"
+import HomePage from "./pages/home-page"
+import CharactersPage from "./pages/characters-page"
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch()
@@ -24,11 +24,11 @@ const App: React.FC = () => {
       children: [
         {
           path: "/",
-          element: <Home />
+          element: <HomePage />
         },
         {
           path: "/characters",
-          element: <Characters />
+          element: <CharactersPage />
         },
       ]
     }

@@ -47,7 +47,7 @@ const DrawerMenu: React.FC<DrawerMenuProps> = ({ isOpen, setIsOpen }) => {
         </nav>
       </div>
     </Drawer>
-  );
-};
+  )
+}
 
 export default DrawerMenu

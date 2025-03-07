@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
     }}>
       <div style={{ fontSize: "30px", color: "#ffff92" }}>FOOTER</div>
     </Footer>
-  );
-};
+  )
+}
 
 export default Footer
