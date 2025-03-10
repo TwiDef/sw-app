@@ -10,9 +10,17 @@ const Characters: React.FC<CharactersProps> = ({ data }) => {
   console.log(data)
 
   return (
-    <div style={{ color: "#ffd" }}>
-      CHARACTERS=+
-    </div>
+    <section style={{ marginTop: "10px", color: "#ffd" }}>
+      <ul>
+        {data?.results?.map((char, i: number) => {
+          return (
+            <li key={i}>
+              {char.name}
+            </li>
+          )
+        })}
+      </ul>
+    </section>
   )
 }
 
