@@ -30,7 +30,7 @@ const Header: React.FC<HeaderProps> = ({ setIsOpen }) => {
     }}>
       {screens?.md ?
         <div style={{ fontSize: "30px" }}>
-          <nav>
+          <nav className="header-nav">
             <ul style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
               {headerItems.map((item, i: number) => {
                 return (

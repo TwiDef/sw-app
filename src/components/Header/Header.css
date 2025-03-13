@@ -17,3 +17,7 @@
 .ant-layout-header a:hover {
     color: #568cff;
 }
+
+.header-nav .active {
+    color: #568cff;
+}
