@@ -8,8 +8,6 @@ type CharactersProps = {
 
 const Characters: React.FC<CharactersProps> = ({ data }) => {
 
-  console.log(data)
-
   return (
     <section style={{ marginTop: "10px", color: "#ffd" }}>
       <ul

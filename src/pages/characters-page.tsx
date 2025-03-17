@@ -1,15 +1,23 @@
 import React from 'react'
-import Characters from '../components/Characters'
 import { useGetCharactersQuery } from '../services/characters'
+import PageNavigation from '../components/PageNavigation'
+import Characters from '../components/Characters'
 
 const CharactersPage: React.FC = () => {
-  const [nextPage, setNextPage] = React.useState<string | null>(null)
-  const [prevPage, setPrevPage] = React.useState<string | null>(null)
+  let [currentPage, setCurrentPage] = React.useState<number>(1)
+  const { data, error, isLoading } = useGetCharactersQuery(currentPage)
 
-  const { data, error, isLoading } = useGetCharactersQuery(2)
+  console.log(data)
+  console.log(currentPage)
 
   return (
-    <Characters data={data} />
+    <>
+      <Characters data={data} />
+      <PageNavigation
+        setCurrentPage={setCurrentPage}
+        currentPage={currentPage}
+        totalElements={data?.count} />
+    </>
   )
 }
 
