@@ -1,10 +1,9 @@
 import React from "react"
 import { Icharacter } from "../../services/@types"
 import { getCharId } from "../../services/helpers"
+import { Link } from "react-router-dom"
 
 import "./CharCard.css"
-import { Button } from "antd"
-import { Link } from "react-router-dom"
 
 type CharCardProps = {
   char: Icharacter
@@ -28,7 +27,7 @@ const CharCard: React.FC<CharCardProps> = ({ char }) => {
           </div>
           <div className="card-back">
             <div className="card-back__img">
-              <img width={100} src={`./src/assets/chars-img/${(getCharId(char.url)
+              <img src={`./src/assets/chars-img/${(getCharId(char.url)
                 .match(/\d/g))
                 ?.join("")}.jpg`} alt="" />
             </div>
@@ -63,13 +62,10 @@ const CharCard: React.FC<CharCardProps> = ({ char }) => {
                 </div>
               }
             </div>
-            <Link to="/">
-              <Button
-                className="card-back__btn"
-                size="large"
-                block>
-                about
-              </Button>
+            <Link
+              className="card-back__btn"
+              to="/">
+              about
             </Link>
           </div>
 

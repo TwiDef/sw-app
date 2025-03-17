@@ -3,12 +3,13 @@ import { IfethedCharacters } from './@types'
 
 export const charactersApi = createApi({
   reducerPath: "charactersApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "https://swapi.py4e.com/api/" }),
+  /* "https://swapi.py4e.com/api/" */
+  baseQuery: fetchBaseQuery({ baseUrl: "https://swapi.dev/api/" }),
   endpoints: (builder) => ({
 
-    getCharacters: builder.query<IfethedCharacters, void>({
-      query: () => {
-        return `people/`
+    getCharacters: builder.query<IfethedCharacters, number>({
+      query: (page) => {
+        return `people/?page=${page}`
       }
     }),
   }),
