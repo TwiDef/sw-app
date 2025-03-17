@@ -5,7 +5,7 @@ import Characters from '../components/Characters'
 
 const CharactersPage: React.FC = () => {
   let [currentPage, setCurrentPage] = React.useState<number>(1)
-  const { data, error, isLoading } = useGetCharactersQuery(currentPage)
+  const { data, error, isLoading, isFetching } = useGetCharactersQuery(currentPage)
 
   console.log(data)
   console.log(currentPage)

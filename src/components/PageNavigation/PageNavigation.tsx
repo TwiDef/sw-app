@@ -2,6 +2,8 @@ import React from 'react'
 import { Pagination } from 'antd'
 import type { PaginationProps } from 'antd'
 
+import './PageNavigation.css'
+
 type PageNavigation = {
   totalElements?: number,
   currentPage?: number,
@@ -21,7 +23,9 @@ const PageNavigation: React.FC<PageNavigation> = ({ totalElements, currentPage, 
         current={currentPage}
         align="center"
         total={totalElements}
-        showSizeChanger={false} />
+        showSizeChanger={false}
+        responsive={true}
+      />
     </div>
   )
 }
