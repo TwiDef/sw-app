@@ -52,7 +52,7 @@ const Header: React.FC<HeaderProps> = ({ setIsOpen }) => {
           onClick={() => setIsOpen((prev: boolean) => !prev)}
           size="large"
           style={{ background: "#ffff92" }}
-          icon={<MenuOutlined />} />
+          icon={<MenuOutlined style={{ color: "#000" }} />} />
       }
     </Header>
   )
