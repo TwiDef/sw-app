@@ -1,15 +1,12 @@
 import React from 'react'
-import { useGetCharactersQuery } from '../services/characters'
+import { useGetCharactersQuery } from '../services/swapi'
 import PageNavigation from '../components/PageNavigation'
 import Characters from '../components/Characters'
 import Loader from '../components/Loader'
 
 const CharactersPage: React.FC = () => {
   let [currentPage, setCurrentPage] = React.useState<number>(1)
-  const { data, error, isLoading, isFetching } = useGetCharactersQuery(currentPage)
-
-  console.log(data)
-  console.log(currentPage)
+  const { data, isError, isLoading, isFetching } = useGetCharactersQuery(currentPage)
 
   if (isLoading) {
     return <Loader />

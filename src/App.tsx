@@ -7,6 +7,7 @@ import { Grid } from "antd"
 import AppLayout from "./AppLayout"
 import HomePage from "./pages/home-page"
 import CharactersPage from "./pages/characters-page"
+import FilmsPage from "./pages/films-page"
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch()
@@ -29,6 +30,10 @@ const App: React.FC = () => {
         {
           path: "/characters",
           element: <CharactersPage />
+        },
+        {
+          path: "/films",
+          element: <FilmsPage />
         },
       ]
     }

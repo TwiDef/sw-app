@@ -1,8 +1,8 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { IfethedCharacters } from './@types'
+import { IfethedCharacters, IfethedFilms } from './@types'
 
-export const charactersApi = createApi({
-  reducerPath: "charactersApi",
+export const swapi = createApi({
+  reducerPath: "swapi",
   /* "https://swapi.py4e.com/api/" */
   baseQuery: fetchBaseQuery({ baseUrl: "https://swapi.dev/api/" }),
   endpoints: (builder) => ({
@@ -12,7 +12,14 @@ export const charactersApi = createApi({
         return `people/?page=${page}`
       }
     }),
+
+    getFilms: builder.query<IfethedFilms, null>({
+      query: () => {
+        return "films"
+      }
+    }),
+
   }),
 })
 
-export const { useGetCharactersQuery } = charactersApi
+export const { useGetCharactersQuery, useGetFilmsQuery } = swapi
