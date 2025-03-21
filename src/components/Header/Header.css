@@ -18,6 +18,10 @@
     color: #568cff;
 }
 
+.header-nav {
+    font-size: 30px;
+}
+
 .header-nav .active {
     color: #568cff;
 }

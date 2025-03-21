@@ -29,24 +29,22 @@ const Header: React.FC<HeaderProps> = ({ setIsOpen }) => {
       lineHeight: "1.5"
     }}>
       {screens?.md ?
-        <div style={{ fontSize: "30px" }}>
-          <nav className="header-nav">
-            <ul style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
-              {headerItems.map((item, i: number) => {
-                return (
-                  <li
-                    style={{ listStyleType: "none" }}
-                    key={i}>
-                    <NavLink
-                      to={item.to}>
-                      {item.children}
-                    </NavLink>
-                  </li>
-                )
-              })}
-            </ul>
-          </nav>
-        </div>
+        <nav className="header-nav">
+          <ul style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
+            {headerItems.map((item, i: number) => {
+              return (
+                <li
+                  style={{ listStyleType: "none" }}
+                  key={i}>
+                  <NavLink
+                    to={item.to}>
+                    {item.children}
+                  </NavLink>
+                </li>
+              )
+            })}
+          </ul>
+        </nav>
         :
         <Button
           onClick={() => setIsOpen((prev: boolean) => !prev)}

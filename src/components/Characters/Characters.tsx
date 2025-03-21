@@ -1,5 +1,6 @@
 import React from 'react'
 import { IfethedCharacters } from '../../services/@types'
+
 import CharCard from '../CharCard'
 
 type CharactersProps = {

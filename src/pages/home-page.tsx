@@ -1,4 +1,5 @@
 import React from 'react'
+
 import MainTitle from '../components/MainTitle'
 
 const HomePage: React.FC = () => {

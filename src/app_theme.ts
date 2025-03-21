@@ -8,6 +8,9 @@ export const app_theme = {
       itemActiveColorDisabled: "#fff",
       colorBgTextHover: "#568cff",
       borderRadius: 50
+    },
+    Card: {
+      bodyPadding: 12
     }
   }
 }
