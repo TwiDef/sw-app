@@ -4,6 +4,7 @@ import { useGetCharactersQuery } from '../services/swapi'
 import PageNavigation from '../components/PageNavigation'
 import Characters from '../components/Characters'
 import Loader from '../components/Loader'
+import Error404 from '../components/Error404'
 
 const CharactersPage: React.FC = () => {
   let [currentPage, setCurrentPage] = React.useState<number>(1)
@@ -15,6 +16,10 @@ const CharactersPage: React.FC = () => {
 
   if (isFetching) {
     return <Loader />
+  }
+
+  if (isError) {
+    return <Error404 />
   }
 
   return (

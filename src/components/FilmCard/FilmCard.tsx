@@ -11,7 +11,7 @@ type FilmCardProps = {
 
 const FilmCard: React.FC<FilmCardProps> = ({ film }) => {
   return (
-    <li>
+    <li style={{ cursor: "pointer" }}>
       <Tilt>
         <Card
           style={{ width: 240 }}

@@ -14,12 +14,12 @@ const AppLayout: React.FC = () => {
 
   return (
     <div style={{ height: "100%" }}>
-      <main className="mainLayout">
+      <div className="mainLayout">
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
         <div id="stars4"></div>
-      </ main>
+      </ div>
       <DrawerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
 
       <Header setIsOpen={setIsOpen} />
