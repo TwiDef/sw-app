@@ -62,7 +62,7 @@ const CharCard: React.FC<CharCardProps> = ({ char }) => {
             <Link
               className="card-back__btn"
               to={`/characters/${getCharId(char.url)}`}>
-              about
+              more info
             </Link>
           </div>
 

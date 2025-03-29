@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { IfethedCharacters, IfethedFilms } from './@types'
+import { IfethedCharacters, IfethedFilms, IFilm } from './@types'
 
 export const swapi = createApi({
   reducerPath: "swapi",
@@ -19,7 +19,13 @@ export const swapi = createApi({
       }
     }),
 
+    getSingleFilm: builder.query<IFilm, string>({
+      query: (id) => {
+        return `films/${id}`
+      }
+    }),
+
   }),
 })
 
-export const { useGetCharactersQuery, useGetFilmsQuery } = swapi
+export const { useGetCharactersQuery, useGetFilmsQuery, useGetSingleFilmQuery } = swapi

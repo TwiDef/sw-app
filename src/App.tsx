@@ -8,6 +8,7 @@ import AppLayout from "./AppLayout"
 import HomePage from "./pages/home-page"
 import CharactersPage from "./pages/characters-page"
 import FilmsPage from "./pages/films-page"
+import SingleFilmPage from "./pages/single-film-page"
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch()
@@ -38,6 +39,10 @@ const App: React.FC = () => {
         {
           path: "/films",
           element: <FilmsPage />
+        },
+        {
+          path: "/films/:id",
+          element: <SingleFilmPage />
         },
       ]
     }

@@ -9,8 +9,6 @@ type FilmsProps = {
 
 const Films: React.FC<FilmsProps> = ({ filmList }) => {
 
-  console.log(filmList)
-
   return (
     <section style={{
       display: "flex",
@@ -33,8 +31,8 @@ const Films: React.FC<FilmsProps> = ({ filmList }) => {
           zIndex: 1
         }}>
         {
-          filmList?.map((film) => {
-            return <FilmCard key={film.episode_id} film={film} />
+          filmList?.map((film, i) => {
+            return <FilmCard key={film.episode_id} film={film} order={i + 1} />
           })
         }
       </ul>
