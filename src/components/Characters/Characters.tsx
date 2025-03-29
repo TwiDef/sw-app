@@ -14,6 +14,7 @@ const Characters: React.FC<CharactersProps> = ({ data }) => {
       <ul
         style={{
           display: "flex",
+          minHeight: "660px",
           alignItems: "center",
           justifyContent: "space-evenly",
           gap: "1rem",

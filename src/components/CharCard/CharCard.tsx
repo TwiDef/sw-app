@@ -10,6 +10,7 @@ type CharCardProps = {
 }
 
 const CharCard: React.FC<CharCardProps> = ({ char }) => {
+
   return (
     <li style={{ listStyleType: "none" }}>
       <article className="card">
@@ -18,18 +19,14 @@ const CharCard: React.FC<CharCardProps> = ({ char }) => {
             style={{
               backgroundSize: "cover",
               backgroundPosition: "center",
-              backgroundImage: (`url(./src/assets/chars-img/${(getCharId(char.url)
-                .match(/\d/g))
-                ?.join("")}.jpg`)
+              backgroundImage: (`url(./src/assets/chars-img/${(getCharId(char.url))}.jpg`)
             }}
             className="card-front">
             <h6 className="card-front__title">{char.name}</h6>
           </div>
           <div className="card-back">
             <div className="card-back__img">
-              <img src={`./src/assets/chars-img/${(getCharId(char.url)
-                .match(/\d/g))
-                ?.join("")}.jpg`} alt="" />
+              <img src={`./src/assets/chars-img/${(getCharId(char.url))}.jpg`} alt="char" />
             </div>
             <div className="card-back__about">
               <div className="card-back__stat">
@@ -64,7 +61,7 @@ const CharCard: React.FC<CharCardProps> = ({ char }) => {
             </div>
             <Link
               className="card-back__btn"
-              to="/">
+              to={`/characters/${getCharId(char.url)}`}>
               about
             </Link>
           </div>

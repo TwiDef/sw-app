@@ -32,6 +32,10 @@ const App: React.FC = () => {
           element: <CharactersPage />
         },
         {
+          path: "/characters/:id",
+          element: <div style={{ position: "relative" }}>single-char</div>
+        },
+        {
           path: "/films",
           element: <FilmsPage />
         },
