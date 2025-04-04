@@ -9,6 +9,7 @@ import HomePage from "./pages/home-page"
 import CharactersPage from "./pages/characters-page"
 import FilmsPage from "./pages/films-page"
 import SingleFilmPage from "./pages/single-film-page"
+import SingleCharPage from "./pages/single-char-page"
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch()
@@ -34,7 +35,7 @@ const App: React.FC = () => {
         },
         {
           path: "/characters/:id",
-          element: <div style={{ position: "relative" }}>single-char</div>
+          element: <SingleCharPage />
         },
         {
           path: "/films",

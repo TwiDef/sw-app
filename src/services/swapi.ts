@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { IfethedCharacters, IfethedFilms, IFilm } from './@types'
+import { Icharacter, IfethedCharacters, IfethedFilms, IFilm } from './@types'
 
 export const swapi = createApi({
   reducerPath: "swapi",
@@ -10,6 +10,12 @@ export const swapi = createApi({
     getCharacters: builder.query<IfethedCharacters, number>({
       query: (page) => {
         return `people/?page=${page}`
+      }
+    }),
+
+    getSingleChar: builder.query<Icharacter, string>({
+      query: (id) => {
+        return `people/${id}`
       }
     }),
 
@@ -28,4 +34,8 @@ export const swapi = createApi({
   }),
 })
 
-export const { useGetCharactersQuery, useGetFilmsQuery, useGetSingleFilmQuery } = swapi
+export const {
+  useGetCharactersQuery,
+  useGetSingleCharQuery,
+  useGetFilmsQuery,
+  useGetSingleFilmQuery } = swapi

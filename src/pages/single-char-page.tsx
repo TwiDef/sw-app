@@ -1,14 +1,16 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { useGetSingleFilmQuery } from '../services/swapi'
+import { useGetSingleCharQuery } from '../services/swapi'
 
 import Loader from '../components/Loader'
 import Error404 from '../components/Error404'
 
-const SingleFilmPage: React.FC = () => {
+const SingleCharPage: React.FC = () => {
   const params = useParams()
   const id = params.id
-  const { data, isLoading, isError } = useGetSingleFilmQuery(id!)
+  const { data, isLoading, isError } = useGetSingleCharQuery(id!)
+
+  console.log(data)
 
   if (isLoading) {
     return <Loader />
@@ -20,9 +22,9 @@ const SingleFilmPage: React.FC = () => {
 
   return (
     <section style={{ position: "relative" }}>
-      <img src={`./src/assets/movies-img/${id}.jpg`} />
+      <div>{id}</div>
     </section>
   )
 }
 
-export default SingleFilmPage
+export default SingleCharPage
